@@ -19,11 +19,6 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         self.containerView.setTranslatesAutoresizingMaskIntoConstraints(true)
-    }
-    
-    override func viewDidLayoutSubviews() {
-
-
         
         let screenRect: CGRect = UIScreen.mainScreen().bounds;
         let screenHeight: CGFloat = screenRect.height;
@@ -31,12 +26,8 @@ class ViewController: UIViewController {
         
         self.containerView.frame = CGRectMake(0, 0, screenWidth, screenHeight);
         
-
-
-        
     }
-
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
