@@ -9,11 +9,33 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var containerView: UIView!
     override func viewDidLoad() {
+
+        
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        self.containerView.setTranslatesAutoresizingMaskIntoConstraints(true)
     }
+    
+    override func viewDidLayoutSubviews() {
+
+
+        
+        let screenRect: CGRect = UIScreen.mainScreen().bounds;
+        let screenHeight: CGFloat = screenRect.height;
+        let screenWidth: CGFloat = screenRect.width;
+        
+        self.containerView.frame = CGRectMake(0, 0, screenWidth, screenHeight);
+        
+
+
+        
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
